@@ -18,7 +18,7 @@ export const createAuthor = async (author: Partial<IAuthor>): Promise<IAuthor> =
 };
 
 export const updateAuthor = async (id: number, author: Partial<IAuthor>): Promise<IAuthor> => {
-  const response = await axios.put(`${reactBackendUrl}/authors/${id}`, author);
+  const response = await axios.patch(`${reactBackendUrl}/authors/${id}`, author);
   return response.data;
 };
 

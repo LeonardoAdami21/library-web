@@ -10,5 +10,9 @@ export interface Book {
   title: string;
   description: string;
   publicationDate: string;
-  authorId?: number;
+  authors?: {
+    id: number;
+    name?: string;
+    birthDate?: string;
+  }
 }
