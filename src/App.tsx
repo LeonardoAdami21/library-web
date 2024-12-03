@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AuthorList from "./components/AuthorList";
+import BookList from "./components/BookList";
+import "./App.css";
 
-function App() {
+const App: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<"authors" | "books">("authors");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className="app-header">
+        <h1>Library Management</h1>
+        <nav className="navigation">
+          <button
+            className={activeTab === "authors" ? "active" : ""}
+            onClick={() => setActiveTab("authors")}
+          >
+            Authors
+          </button>
+          <button
+            className={activeTab === "books" ? "active" : ""}
+            onClick={() => setActiveTab("books")}
+          >
+            Books
+          </button>
+        </nav>
       </header>
+      <main className="content">
+        {activeTab === "authors" && <AuthorList />}
+        {activeTab === "books" && <BookList />}
+      </main>
     </div>
   );
-}
+};
 
 export default App;

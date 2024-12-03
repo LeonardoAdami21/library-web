@@ -1,0 +1,76 @@
+/* AuthorList */
+.author-list {
+  margin-top: 20px;
+}
+
+.author-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.author-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.author-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.author-list li:hover {
+  background: #f1f1f1;
+}
+
+.author-list button {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.author-list button:hover {
+  background: #c0392b;
+}
+
+.author-list form {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.author-list form input {
+  width: calc(50% - 10px);
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.author-list form button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.author-list form button:hover {
+  background: #2980b9;
+}
