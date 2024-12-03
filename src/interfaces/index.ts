@@ -8,6 +8,7 @@ export interface IAuthor {
 export interface Book {
   id: number;
   title: string;
+  description: string;
   publicationDate: string;
   authorId?: number;
 }
