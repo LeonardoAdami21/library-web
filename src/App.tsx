@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AuthorList from "./components/AuthorList";
-//import BookList from "./components/BookList";
+import BookList from "./components/BookList";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -27,6 +27,7 @@ const App: React.FC = () => {
       </header>
       <main className="content">
         {activeTab === "authors" && <AuthorList />}
+        {activeTab === "books" && <BookList />}
       </main>
     </div>
   );
