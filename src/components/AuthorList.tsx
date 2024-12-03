@@ -7,7 +7,9 @@ import {
   updateAuthor,
 } from "../api/author.api";
 
-const AuthorList = () => {
+import "./index.css";
+
+const AuthorList:React.FC = () => {
   const [authors, setAuthors] = useState<IAuthor[]>([]);
   const [newAuthor, setNewAuthor] = useState<Partial<IAuthor>>({});
 
@@ -39,7 +41,7 @@ const AuthorList = () => {
   };
 
   return (
-    <div>
+    <div className="author-list">
       <h2>Author List</h2>
       <ul>
         {authors.map((author) => (
